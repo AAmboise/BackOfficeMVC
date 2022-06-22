@@ -7,10 +7,10 @@ if(!isset($_REQUEST['command'])){
 else{
     switch ($_REQUEST['command']) {
         case 'login':
-            # code...
+            
         break;
         case 'register':
-            # code...
+            createUSer();
         break;
         case 'create-actu':
             # code...
