@@ -7,11 +7,12 @@ function createUSer($pdo){
     }
     else{
         $user = new User($_POST['pseudo'], $_POST['email'], $_POST['password']);
-        echo "user:".$user;
-        var_dump($user);
+        // echo "user:".$user;
+        // var_dump($user);
         // $userDB = new UserDataBase();
         // $userDB->create($pdo, $user);
         UserDataBase::create($pdo, $user);
+        require_once './views/users/view_user_create.php';
     }
 }
 function login(){

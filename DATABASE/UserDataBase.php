@@ -6,7 +6,7 @@ class UserDataBase{
                                                                                     '".strip_tags($pUser->password)."',
                                                                                     false)";
         $pdo->exec($sql);
-        echo "sql:".$sql;
+        // echo "sql:".$sql;
     
     }
 }
