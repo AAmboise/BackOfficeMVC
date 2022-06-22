@@ -5,13 +5,15 @@ class User{
     public $password;
     public $isAdmin;
 
-    public function __construct($pPseudo, $pEmail, $pPassword, $pIsAdmin){
-        $this->pseudo = $ppseudo;
+    public function __construct($pPseudo, $pEmail, $pPassword, $pIsAdmin)
+    {
+        $this->pseudo = $pPseudo;
         $this->email = $pEmail;
         $this->password = $pPassword;
         $this->isAdmin = $pIsAdmin;
     }
-    public function __toString(){
+    public function __toString()
+    {
         return " $this->pseudo / $this->email / isAdmin= $this->isAdmin";
     }
 }

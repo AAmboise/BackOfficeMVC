@@ -1,3 +1,4 @@
+<h2>inscription</h2>
 <form method="post">
     <input type="text" name="pseudo" id="pseudo">
     <input type="text" name="email" id="email">

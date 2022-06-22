@@ -1,29 +1,27 @@
 <?php
 require_once './controllers/controllers.php';
 // ROUTAGE !!
-if(!isset($_REQUEST['command'])){
-    login();
-}
-else{
-    switch ($_REQUEST['command']) {
-        case 'login':
-            
+$path = $_SERVER['REQUEST_URI'];
+
+switch ($path)
+{
+    case 'login':
+        
         break;
-        case 'register':
+    case 'register':
             createUSer();
         break;
-        case 'create-actu':
+    case 'create-actu':
             # code...
         break;
-        case 'list-actu':
+    case 'list-actu':
             # code...
         break;
-        case 'afficher-actu':
+    case 'afficher-actu':
             # code...
         break;
-        default:
+    default:
             # code...
         break;
     }
-}
 ?>
