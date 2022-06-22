@@ -21,7 +21,7 @@ switch ($path)
             # code...
         break;
     default:
-            # code...
+        login();
         break;
     }
 ?>
