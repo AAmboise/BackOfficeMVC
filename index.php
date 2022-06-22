@@ -5,19 +5,19 @@ $path = $_SERVER['REQUEST_URI'];
 
 switch ($path)
 {
-    case 'login':
-        
+    case '/login':
+        login();
         break;
-    case 'register':
+    case '/register':
             createUSer();
         break;
-    case 'create-actu':
+    case '/create-actu':
             # code...
         break;
-    case 'list-actu':
+    case '/list-actu':
             # code...
         break;
-    case 'afficher-actu':
+    case '/afficher-actu':
             # code...
         break;
     default:

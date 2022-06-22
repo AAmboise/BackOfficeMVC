@@ -4,4 +4,4 @@
     <input type="password" name="password" id="password">
     <button>se connecter</button>
 </form>
-<a href="index.php?command=register">Creer un compte</a>
+<a href="register">Creer un compte</a>
