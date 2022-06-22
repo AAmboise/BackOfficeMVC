@@ -1,7 +1,7 @@
 <?php
 require_once './models/models.php';
 require_once './DATABASE/database.php';
-function createUSer(){
+function createUSer($pdo){
     if(!isset($_POST['pseudo'])){
         require_once './views/users/view_form_inscription.php';
     }
@@ -9,7 +9,9 @@ function createUSer(){
         $user = new User($_POST['pseudo'], $_POST['email'], $_POST['password']);
         echo "user:".$user;
         var_dump($user);
-        create($user);
+        // $userDB = new UserDataBase();
+        // $userDB->create($pdo, $user);
+        UserDataBase::create($pdo, $user);
     }
 }
 function login(){

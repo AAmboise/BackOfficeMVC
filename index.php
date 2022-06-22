@@ -1,5 +1,6 @@
 <?php
 require_once './controllers/controllers.php';
+$pdo = pdo_connect();
 // ROUTAGE !!
 $path = $_SERVER['REQUEST_URI'];
 
@@ -9,7 +10,7 @@ switch ($path)
         login();
         break;
     case '/register':
-            createUSer();
+            createUSer($pdo);
         break;
     case '/create-actu':
             # code...
