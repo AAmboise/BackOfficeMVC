@@ -4,9 +4,15 @@ $pdo = pdo_connect();
 session_start();
 // ROUTAGE !!
 $path = $_SERVER['REQUEST_URI'];
-if($_SESSION['isConnected']){
-    afficherListeActus($pdo);
+if(!$path){
+    if($_SESSION['isConnected']){
+        afficherListeActus($pdo);
+    }
+    else{
+        login($pdo);
+    }
 }
+else{
 switch ($path)
 {
     case '/login':
@@ -28,4 +34,5 @@ switch ($path)
         login();
         break;
     }
+}
 ?>
