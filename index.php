@@ -1,13 +1,16 @@
 <?php
 require_once './controllers/controllers.php';
 $pdo = pdo_connect();
+session_start();
 // ROUTAGE !!
 $path = $_SERVER['REQUEST_URI'];
-
+if($_SESSION['isConnected']){
+    afficherListeActus($pdo);
+}
 switch ($path)
 {
     case '/login':
-        login();
+        login($pdo);
         break;
     case '/register':
             createUSer($pdo);
