@@ -17,21 +17,21 @@ switch ($path)
 {
     case '/login':
         login($pdo);
-        break;
+    break;
     case '/register':
-            createUSer($pdo);
-        break;
+        createUSer($pdo);
+    break;
     case '/create-actu':
-            creerActu($pdo);
-        break;
+        creerActu($pdo);
+    break;
     case '/list-actu':
-            # code...
-        break;
+        afficherListeActus($pdo);
+    break;
     case '/afficher-actu':
-            # code...
-        break;
-    default:
         # code...
+    break;
+    default:
+        afficherListeActus($pdo);
         break;
     }
 }

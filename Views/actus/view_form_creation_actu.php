@@ -1,5 +1,5 @@
 <?php
-$title="Back-office Connexion";
+$title="Back-office Create-Actu";
 $css= ' <link rel="stylesheet" href="styleConnexion.css">';
 ob_start();
 ?>
@@ -9,6 +9,9 @@ ob_start();
     <textarea name="sujet" id="sujet" cols="30" rows="10"></textarea>
     <button>Créer</button>
 </form>
+<?php
+$actu = afficherListeActus($pdo);
+?>
 <?php
 $content= ob_get_clean();
 require_once './views/base.php';

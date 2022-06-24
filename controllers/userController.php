@@ -23,6 +23,7 @@ require_once './database/database.php';
             if ($isConnected){
                 $_SESSION['isConnected']=true;
                 require_once './views/actus/view_afficher_list_actus.php';
+                header('location:list-actu');
             }
             else{
                 require_once './views/users/view_form_connexion.php';

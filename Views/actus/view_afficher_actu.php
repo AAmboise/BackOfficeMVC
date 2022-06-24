@@ -1,5 +1,5 @@
 <?php
-$title="Back-office Connexion";
+$title="Back-office Actu";
 $css= ' <link rel="stylesheet" href="styleConnexion.css">';
 ob_start();
 ?>

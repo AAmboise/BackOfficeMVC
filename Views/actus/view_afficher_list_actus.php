@@ -1,6 +1,6 @@
 list actu
 <?php
-$title="Back-office Connexion";
+$title="Back-office List-Actu";
 $css= ' <link rel="stylesheet" href="styleConnexion.css">';
 ob_start();
 ?>
