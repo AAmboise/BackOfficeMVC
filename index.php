@@ -5,7 +5,7 @@ session_start();
 // ROUTAGE !!
 $path = $_SERVER['REQUEST_URI'];
 if(!$path){
-    if($_SESSION['isConnected']){
+    if(isset($_SESSION['isConnected']) && $_SESSION['isConnected']){
         afficherListeActus($pdo);
     }
     else{
@@ -22,7 +22,7 @@ switch ($path)
             createUSer($pdo);
         break;
     case '/create-actu':
-            # code...
+            creerActu($pdo);
         break;
     case '/list-actu':
             # code...
@@ -31,7 +31,7 @@ switch ($path)
             # code...
         break;
     default:
-        login();
+        # code...
         break;
     }
 }

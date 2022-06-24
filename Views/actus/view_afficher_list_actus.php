@@ -4,7 +4,7 @@ $title="Back-office Connexion";
 $css= ' <link rel="stylesheet" href="styleConnexion.css">';
 ob_start();
 ?>
-<a href="index.php?command=create-actu">create-actu</a><br>
+<a href="create-actu">create-actu</a><br>
 
 <?php
 if (isset($actus) && $actus && (($actus->rowCount())>0)){
